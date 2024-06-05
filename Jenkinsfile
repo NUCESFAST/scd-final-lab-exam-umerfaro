@@ -78,7 +78,7 @@ pipeline {
 
     environment {
         DOCKER_HUB_CREDENTIALS_ID = 'docker-hub-credentials2'
-        DOCKER_REPO_PREFIX = 'muhammadranaumerofficial754/'
+        DOCKER_REPO_PREFIX = 'muhammadranaumerofficial754'
     }
 
     stages {
