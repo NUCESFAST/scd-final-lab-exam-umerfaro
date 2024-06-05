@@ -103,8 +103,9 @@ pipeline {
                             'post_backend_21i1184'
                         ]
                         services.each {
-                            def app = docker.build("${DOCKER_REPO_PREFIX}/${it}", "./${it}")
-                            app.push('latest')
+                           def app = docker.build("${DOCKER_REPO_PREFIX}/${it}", "./${it}")
+                           echo "Pushing ${DOCKER_REPO_PREFIX}/${it}"
+                           app.push('latest')
                         }
                     }
                 }
