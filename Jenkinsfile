@@ -44,7 +44,7 @@ pipeline {
             steps {
                 script {
                     // Use Docker Compose to deploy
-                    sh 'docker-compose up -d'
+                    bat  'docker-compose up -d'
                 }
             }
         }
@@ -55,11 +55,11 @@ pipeline {
                     // Implement your validation checks here
                     echo 'Running validation tests...'
                     // Example: curl to check if services are up and running
-                    sh 'curl -f http://localhost:8412'
-                    sh 'curl -f http://localhost:8413'
-                    sh 'curl -f http://localhost:8411'
-                    sh 'curl -f http://localhost:8414'
-                    sh 'curl -f http://localhost:8415'
+                    bat  'curl -f http://localhost:8412'
+                    bat  'curl -f http://localhost:8413'
+                    bat  'curl -f http://localhost:8411'
+                    bat  'curl -f http://localhost:8414'
+                    bat  'curl -f http://localhost:8415'
                 }
             }
         }
@@ -68,7 +68,7 @@ pipeline {
     post {
         always {
             // Cleanup after pipeline execution
-            sh 'docker-compose down'
+            bat  'docker-compose down'
         }
     }
 }
