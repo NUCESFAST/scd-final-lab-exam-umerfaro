@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
-var url = 'mongodb://localhost:27017'
+var url = 'mongodb+srv://umer:admin@node1.tkgjljq.mongodb.net/helloword?retryWrites=true&w=majority&appName=node1';
 
 app.post('/create_post', async (req, res) => {
     const id = randomBytes(6).toString('hex');
