@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth_backend_21i1184-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auth_backend_21i1184
+  template:
+    metadata:
+      labels:
+        app: auth_backend_21i1184
+    spec:
+      containers:
+      - name: auth_backend_21i1184-container
+        image: muhammadranaumerofficial754/auth_backend_21i1184:latest
+        ports:
+        - containerPort: 8412
+      nodeSelector:
+        kubernetes.io/hostname: scd-assig03-cluster-m02       

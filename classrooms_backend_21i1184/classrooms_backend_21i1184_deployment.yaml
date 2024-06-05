@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: classrooms_backend_21i1184-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: classrooms_backend_21i1184
+  template:
+    metadata:
+      labels:
+        app: classrooms_backend_21i1184
+    spec:
+      containers:
+      - name: classrooms_backend_21i1184-container
+        image: muhammadranaumerofficial754/classrooms_backend_21i1184:latest
+        ports:
+        - containerPort: 8413
+      nodeSelector:
+        kubernetes.io/hostname: scd-assig03-cluster-m02       

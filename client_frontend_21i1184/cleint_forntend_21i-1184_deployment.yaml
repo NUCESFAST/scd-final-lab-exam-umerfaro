@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client_frontend_21i1184-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: client_frontend_21i1184
+  template:
+    metadata:
+      labels:
+        app: client_frontend_21i1184
+    spec:
+      containers:
+      - name: client_frontend_21i1184-container
+        image: muhammadranaumerofficial754/client_frontend_21i1184:latest
+        ports:
+        - containerPort: 8411
+      nodeSelector:
+        kubernetes.io/hostname: scd-assig03-cluster-m02       

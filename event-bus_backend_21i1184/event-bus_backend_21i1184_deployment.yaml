@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: event-bus_backend_21i1184-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: event-bus_backend_21i1184
+  template:
+    metadata:
+      labels:
+        app: event-bus_backend_21i1184
+    spec:
+      containers:
+      - name: event-bus_backend_21i1184-container
+        image: muhammadranaumerofficial754/event-bus_backend_21i1184:latest
+        ports:
+        - containerPort: 8414
+      nodeSelector:
+        kubernetes.io/hostname: scd-assig03-cluster-m02       
