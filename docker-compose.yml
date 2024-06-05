@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   auth_backend_21i1184:
-    build: ./Auth
+    build: ./auth_backend_21i1184
     container_name: auth_backend_21i1184
     ports:
       - "8412:8412"
@@ -10,7 +10,7 @@ services:
       - mongodb
 
   classrooms_backend_21i1184:
-    build: ./Classrooms
+    build: ./classrooms_backend_21i1184
     container_name: Classrooms_backend_21i1184
     ports:
       - "8413:8413"
@@ -18,19 +18,19 @@ services:
       - mongodb
 
   client_frontend_21i1184:
-    build: ./client
+    build: ./client_frontend_21i1184
     container_name: client_frontend_21i1184
     ports:
       - "8411:8411"
 
   event-bus_backend_21i1184:
-    build: ./event-bus
+    build: ./event-bus_backend_21i1184
     container_name: event-bus_backend_21i1184
     ports:
       - "8414:8414"
 
   post_backend_21i1184:
-    build: ./Post
+    build: ./post_backend_21i1184
     container_name: post_backend_21i1184
     ports:
       - "8415:8415"
