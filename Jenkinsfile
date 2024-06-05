@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 // Checkout the code from GitHub
-                git 'https://github.com/yourusername/yourrepository.git'
+                git 'https://github.com/NUCESFAST/scd-final-lab-exam-umerfaro.git'
             }
         }
 
